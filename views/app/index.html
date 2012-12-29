@@ -1,0 +1,54 @@
+<!--
+  Derby templates are similar to Handlebars, except that they are first
+  parsed as HTML, and there are a few extensions to make them work directly
+  with models. A single HTML template defines the HTML output, the event
+  handlers that update the model after user interaction, and the event handlers
+  that update the DOM when the model changes.
+
+  As in Handlebars, double curly braces output a value literally. Derby
+  templates add single curly braces, which output a value and set up
+  model <- -> view bindings for that object.
+
+  Elements that end in colon define template names. Pre-defined templates
+  are capitalized by convention, but template names are case-insensitive.
+  Pre-defined templates are automatically included when the page is rendered.
+-->
+
+<import: src="./shared">
+<import: src="./home">
+<import: src="./users">
+<import: src="./user">
+
+<Title:>
+	Scooter - A Derby Test App
+
+<Header:>
+	<ui:connectionAlert>
+	<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+
+	  <div class="container-fluid">
+		<a class="brand" href="/">Scooter</a>
+		<div class="nav-collapse">
+		  <ul class="nav">
+			{{#each pages}}
+			  <li class="{{#if equal(url, activeUrl)}}active{{/}}"><a href="{{.url}}">{{.title}}</a></li>
+			{{/}}
+		  </ul>
+		</div>
+	  </div>
+
+	</div>
+  </div>
+
+  <div class="container-fluid">
+	<div class="row-fluid">
+
+  <Footer:>
+	  <hr>
+	  <footer class="container-fluid">
+		<div class="row-fluid">
+		  <p>My footer here</p>
+		</div>
+	  </footer>
+  </div> <!-- end container-fluid-->

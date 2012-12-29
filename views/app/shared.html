@@ -1,0 +1,10 @@
+<left_sidebar:>
+	<div class="span2" id="left-sidebar">
+		<h4>Users</h4>
+		<ul>
+			{{#each _users}}
+				<li><a href="/users/{{id}}">{{username}}</a></li>
+			{{/}}
+		</ul>
+	</div>
+	<div class="span8" id="main-content">

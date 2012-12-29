@@ -1,4 +1,4 @@
-scooter
+Scooter
 =======
 
-A derbyjs test application
+A Derby test application

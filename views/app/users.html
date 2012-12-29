@@ -1,0 +1,11 @@
+<Title:>
+	List of Users
+
+<Body:>
+	<app:shared:left_sidebar>
+
+	<h3>List of Users</h3>
+
+	{{#each _users}}
+		<li><a href="/users/{{id}}">{{username}} - {{first_name}} {{last_name}}</a></li>
+	{{/}}

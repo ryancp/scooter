@@ -1,0 +1,17 @@
+{
+  "name": "Scooter",
+  "description": "A Derby test application",
+  "version": "0.1",
+  "main": "./server.js",
+  "dependencies": {
+    "derby": "git://github.com/lefnire/derby#master",
+    "derby-ui-boot": "*",
+    "express": "*",
+    "gzippo": "*",
+    "racer-db-mongo": "*",
+    "async": "*",
+    "moment": "*",
+    "underscore": "*"
+  },
+"private": true
+}
